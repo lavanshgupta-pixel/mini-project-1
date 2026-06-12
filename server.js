@@ -13,7 +13,18 @@ require('dotenv').config();
 const upload  = require('./config/multer');
 const user = require('./models/user');
 const { fileLoader } = require('ejs');
-app.listen(3000);
+
+
+
+
+
+
+//starting server
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
 
 //mongodb connection 
 
